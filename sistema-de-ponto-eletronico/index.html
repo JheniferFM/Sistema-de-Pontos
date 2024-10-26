@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de controle de ponto</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="data-hora">
+        <p id="dia-semana">Segunda-Feira</p>
+        <p id="dia-mes-ano">29/08/2024</p>
+        <p id="hora-min-seg">08:45:37</p>
+
+    </div>
+
+    <dialog id="dialog-ponto">
+        <p id="dialog-dia-mes-ano">01/09/2024</p>
+        <p id="dialog-hora-min-seg">08:59:20</p>
+
+    <select name="select-tipos-pontos" id="select-tipos-pontos">
+        <option value="Entrada">Entrada</option>
+        <option value="intervalo">intervalo</option>
+        <option value="Volta-intervalo">Volta intervalo</option>
+        <option value="Saida">Saida</option>
+    </select>
+
+<button id="btn-dialog-registrar-ponto">Registrar-ponto</button>
+<button id="btn-dialog-fechar" class="btn-dialog-fechar">X</button>
+
+</dialog>
+
+<div id="div-btnresgistrar-ponto">
+    
+<button id="btn-registrar-ponto">Registrar-ponto</button>
+
+</div>
+
+<div id="div-alerta" class="hidden">
+
+    <p id="alerta-texto">Ponto Registrado como:  as </p>
+    
+
+
+
+
+</div>
+
+
+
+<button id="menu-toggle" class="menu-button">☰</button>
+    <div class="sidebar" id="sidebar">
+        <button id="mostrar-ausencia">Justificativa de ausência</button>
+        <button id="mostrar-registros">Mostrar registros</button>
+    </div>
+
+
+<!--botao para aparecer os registros antigos-->
+<dialog id="dialog-registros-passados" class="dialog-registros">
+    <form method="dialog">
+        <p>
+<div class="main-content">
+            <h1>Relatórios Passados</h1>
+            <button id="fechar-registros" class="button-fechar-registros">X</button>
+       
+        <div class="div-registros">
+            <fieldset>
+            <ul id="lista-registros"></ul>
+            </fieldset>        
+        </div>
+        
+</div>
+</p>
+    </form>
+</dialog>
+
+
+
+
+<!-- aparecer o formulario de ausencia -->
+<dialog id="dialog-ausencia">
+    <form method="dialog">
+        <p>
+            <label for="justificativa-ausencia">
+                Justificativa da ausência:
+                <input type="text" id="justificativa-ausencia" placeholder="Justificativa da ausência">
+                <br><br>
+                Atestado (caso necessite):
+                <input type="file" id="atestado-ausencia">
+                <br><br>
+            </label>
+            <div>
+                <button type="button" id="btn-dialog-registrar-ausencia">Registrar ausência</button>
+                <button type="button" id="btn-dialog-fechar" class="btn-dialog-fechar">X</button>
+            </div>
+        </p>
+    </form>
+</dialog>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>
